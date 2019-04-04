@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -6,35 +7,100 @@
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="img/candado.png" />
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 </head>
 
 <body>
     <header>
         <navbar>
-            <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="#">
-                    <img src="/img/world.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
-                    Crifradoooooo
-                </a>
+            <nav class="navbar navbar-dark bg-primary">
+                <a class="navbar-brand" href="#"><i class="fas fa-compass"></i> Cifrado</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <ul class="right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                      </ul> 
+                </button>
             </nav>
         </navbar>
-        <h1>Cifrado Cesar</h1>
-        <p>Bienvenido a la pagina de cifrar oaispasjkld</p>
     </header>
     <main>
         <section>
-            <input type="text" name="name" placeholder="Ingrese su nombre"><br>
-
+            <div>
+                <h1>Cifrado Cesar</h1>
+                
+                <p>Bienvenido a la pagina de cifrar oaispasjkld</p>
+            </div>
+            <input id="name" type="text" name="name" placeholder="Ingrese su nombre" /><br>
+        </section>
+        <section>
             <div id="root">
-                <h1>Cipher</h1>
+                <h3>Cipher</h3>
             </div>
             <div>
-                <button type="button" class="btn btn-info">Comenzar</button>
+                <div>
+                    <p><b>Instrucciones:</b></p>
+                    <ul>
+                        <li>Ingrese su nombre y de click en comenzar.</li>
+                        <li>Ingrese el mensaje que desea Codificar o Decodificar.</li>
+                        <li>Indique el número secreto.</li>
+                        <li>Haga click en Codificar o Decodificar según corresponda para ver el
+                            resultado.</li>
+                        <li>Puedes cifrar los siguientes caracteres: Mayúsculas,minúsculas</li>
+                        <li>Presione "Enviar resultado por E-mail" si desea compartir el
+                            mensaje.</li>
+                        <li>Para escribir un nuevo texto a Codificar o Decodificar presione
+                            "Limpiar"</li>
+                    </ul>
+                </div>
+                <button id="start" type="button" class="btn btn-info">Comenzar</button>
+            </div>
+        </section>
+        <section id="container" class="hidden">
+            <div id="encode_container" class="data_container">
+                <h5>Ingrese el mensaje a codificar</h5>
+                <textarea id="ejemplo"></textarea>
+                <input id="encode_message" type="text" placeholder="Mensaje">
+                <input id="encode_offset" type="number" placeholder="Número secreto">
+                <button id="encode" type="button">Codificar</button>
+            </div>
+
+            <div id="decode_container" class="data_container">
+                <h5>Ingrese el mensaje a decodificar</h5>
+                <input id="decode_message" type="text" placeholder="Mensaje">
+                <input id="decode_offset" type="number" placeholder="Número secreto">
+                <button id="decode" type="button">Decodificar</button>
+            </div>
+
+            <div>
+                <div id="result_container" class="hidden">
+                    <h4>Resultado</h4>
+                    <input id="result" type="text">
+                    <button id="send_email">Enviar resultado por E-mail</button>
+                    <button id="clean">Limpiar</button>
+                    <button id="btnhome"><a href="index.html">Volver</a></button>
+                </div>
             </div>
         </section>
     </main>
-    <footer>
-        Todos los derechos reservados
+    <footer class="navbar navbar-dark bg-primary">
+        <div class="row">
+            <div class="col col-sm-6 ">
+                <h6>Cipher &copy; 2019-04</h6>
+            </div>
+            <div class="col col-sm-12 ">
+                <ul>
+                    <li>Aviso legal</li>
+                    <li>Condiciones Genereales de Uso</li>
+                    <li>Política de Privacidad</li>
+                    <li>Denunciar un contenido ilegal</li>
+                </ul>
+            </div>
+        </div>
     </footer>
     <script src="cipher.js"></script>
     <script src="index.js"></script>

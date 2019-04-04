@@ -1,1 +1,13 @@
-/* Acá va tu código */
+.hidden {
+    display: none
+}
+
+body {
+    background-image:url(img/cifrado.jpg);
+    height: 100px;
+    background-size: cover
+
+  }
+
+
+  
