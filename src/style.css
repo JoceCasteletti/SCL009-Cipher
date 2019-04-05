@@ -1,13 +1,29 @@
 .hidden {
-    display: none
+    display: none;
 }
 
 body {
     background-image:url(img/cifrado.jpg);
     height: 100px;
-    background-size: cover
+    background-size: cover;
+}
 
-  }
+#encode_message {
+    width: 35em;
+	height: 15em;
+    background-color: rgba(192,192,192,0.3);
+    /* border: 1px solid black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    */
+}
+    
+#decode_message {
+    width: 35em;
+	height: 15em;
+	background-color: rgba(192,192,192,0.3);
+}
 
-
-  
+.starting{
+    background-color:white;
+}

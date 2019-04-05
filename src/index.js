@@ -1,6 +1,6 @@
 const encode = document.getElementById('encode');
 const decode = document.getElementById('decode');
-const ejemplo = document.getElementById('ejemplo');
+const message_text = document.getElementById('message_text');
 const start = document.getElementById('start');
 const container = document.getElementById('container');
 
@@ -16,9 +16,9 @@ start.addEventListener('click', () => {
     // Aquí va lógica de validación de comprobación de nombre ante de continuar
 
    if (document.getElementById('name').value.length == 0) {
-       alert('ingrese nombre')
+       alert('Ingrese su nombre para poder continuar, porfavor')
    } else {
-     ex1.style.display = 'block';
+     container.style.display = 'block';
    }
 
 

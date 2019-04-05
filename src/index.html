@@ -21,8 +21,8 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     <ul class="right">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <a href="index.html">Home</a>
+                        <a href="https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar" target="_blank">About</a>
                       </ul> 
                 </button>
             </nav>
@@ -32,15 +32,25 @@
         <section>
             <div>
                 <h1>Cifrado Cesar</h1>
-                
+                <div id= "welcome"class="starting"></div>
                 <p>Bienvenido a la pagina de cifrar oaispasjkld</p>
+                <h5>Te damos la bienvenida a nuestra aplicación, con esta aplicación 
+                    podrás codificar mensajes con el objetivo de hacer difícil la lectura del mensaje original 
+                    por terceros. Este mensaje codificado podra ser decodificado por tu destinatario de manera
+                    sencilla si tú y tu destinatario conocen el secreto en común.</h5>
+                <h5>Te damos la bienvenida a nuestra aplicación, con esta aplicación 
+                    podrás codificar mensajes con el objetivo de hacer difícil la lectura del mensaje original 
+                    por terceros. Este mensaje codificado podra ser decodificado por tu destinatario de manera
+                    sencilla si tú y tu destinatario conocen el secreto en común.</h5>
             </div>
             <input id="name" type="text" name="name" placeholder="Ingrese su nombre" /><br>
-        </section>
-        <section>
             <div id="root">
-                <h3>Cipher</h3>
-            </div>
+                    <h3>Cipher</h3>
+                    <button id="start" type="button" class="btn btn-info">Comenzar</button>
+                </div>
+        </section>
+        <section id="instructions" class="hidden">
+            
             <div>
                 <div>
                     <p><b>Instrucciones:</b></p>
@@ -57,19 +67,19 @@
                             "Limpiar"</li>
                     </ul>
                 </div>
-                <button id="start" type="button" class="btn btn-info">Comenzar</button>
+               
             </div>
         </section>
         <section id="container" class="hidden">
-            <div id="encode_container" class="data_container">
+            <div id="encode_container" class="data-container">
                 <h5>Ingrese el mensaje a codificar</h5>
-                <textarea id="ejemplo"></textarea>
+                <textarea id="message_text"></textarea>
                 <input id="encode_message" type="text" placeholder="Mensaje">
                 <input id="encode_offset" type="number" placeholder="Número secreto">
                 <button id="encode" type="button">Codificar</button>
             </div>
 
-            <div id="decode_container" class="data_container">
+            <div id="decode_container" class="data-container">
                 <h5>Ingrese el mensaje a decodificar</h5>
                 <input id="decode_message" type="text" placeholder="Mensaje">
                 <input id="decode_offset" type="number" placeholder="Número secreto">
@@ -81,18 +91,20 @@
                     <h4>Resultado</h4>
                     <input id="result" type="text">
                     <button id="send_email">Enviar resultado por E-mail</button>
+                     <!--<a href="https://www.gmail.com/mail/help/intl/es/about.html?iframe" target="_blank"></a>-->
                     <button id="clean">Limpiar</button>
                     <button id="btnhome"><a href="index.html">Volver</a></button>
                 </div>
             </div>
         </section>
     </main>
+    <!-- <div class="float-sm-left"></div><br>  revisar -->
     <footer class="navbar navbar-dark bg-primary">
         <div class="row">
             <div class="col col-sm-6 ">
                 <h6>Cipher &copy; 2019-04</h6>
             </div>
-            <div class="col col-sm-12 ">
+            <div class="col col-sm-6 ">
                 <ul>
                     <li>Aviso legal</li>
                     <li>Condiciones Genereales de Uso</li>
