@@ -9,6 +9,7 @@ const encodeMessage = document.getElementById('encode_message');
 const encodeOffset = document.getElementById('encode_offset');
 const resultContainer = document.getElementById('result_container');
 const result = document.getElementById('result');
+const sendEmail= document.getElementById('send_email');
 
 // https://developer.mozilla.org/en-US/docs/Web/Events/keypress
 encodeMessage.addEventListener('keypress', (event) => {
@@ -47,6 +48,18 @@ start.addEventListener('click', () => {
 
 
 })
+
+
+sendEmail.addEventListener('click',() => {
+    if(document.getElementById('send_email').value.length == 0) {
+        alert('Ingrese el email al que desea enviar el texto')
+    } else {
+        container.style.display = 'block';
+      }
+   
+
+})
+
 
 
 
