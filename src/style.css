@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image:url(img/cifrado.jpg);
+    background: url(img/cifrado.jpg) no-repeat center center fixed;
     height: 100px;
     background-size: cover;
 }

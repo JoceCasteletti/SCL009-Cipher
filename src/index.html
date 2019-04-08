@@ -13,20 +13,22 @@
 
 <body>
     <header>
-        <navbar>
-            <nav class="navbar navbar-dark bg-primary">
-                <a class="navbar-brand" href="#"><i class="fas fa-compass"></i> Cifrado</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    <ul class="right">
-                        <a href="index.html">Home</a>
-                        <a href="https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar" target="_blank">About</a>
-                      </ul> 
-                </button>
-            </nav>
-        </navbar>
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-compass"></i> Cifrado</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar" target="_blank">About
+                            <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <main>
         <section>
@@ -73,8 +75,8 @@
         <section id="container" class="hidden">
             <div id="encode_container" class="data-container">
                 <h5>Ingrese el mensaje a codificar</h5>
-                <textarea id="message_text"></textarea>
-                <input id="encode_message" type="text" placeholder="Mensaje">
+                <textarea id="encode_message"></textarea>
+                <!-- <input id="encode_message" type="text" placeholder="Mensaje"> -->
                 <input id="encode_offset" type="number" placeholder="Número secreto">
                 <button id="encode" type="button">Codificar</button>
             </div>
