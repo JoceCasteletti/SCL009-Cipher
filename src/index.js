@@ -10,11 +10,13 @@ const encodeOffset = document.getElementById('encode_offset');
 const resultContainer = document.getElementById('result_container');
 const result = document.getElementById('result');
 const sendEmail= document.getElementById('send_email');
+const decodeMessage = document.getElementById('decode_message');
+const decodeOffset = document.getElementById('decode_offset');
 
 // https://developer.mozilla.org/en-US/docs/Web/Events/keypress
 encodeMessage.addEventListener('keypress', (event) => {
     if (!(event.keyCode >= 65 && event.keyCode <=90)) {
-        event.preventDefault();
+        event.preventDefault();0
     }
 })
 
@@ -59,6 +61,25 @@ sendEmail.addEventListener('click',() => {
    
 
 })
+
+
+decode.addEventListener('click',() => {
+    if (decodeMessage.value.length == 0) {
+        alert('Ingrese algun mensaje por favor');
+        return; 
+
+
+    } else if (!Number.isInteger(decodeOffset.value) && decodeOffset.value == 0) {
+        // https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Number/isInteger
+        alert('Ingrese número válido por favor');
+        return;
+    }
+
+    // Lista de las clases del elemento del DOM
+    resultContainer.classList.remove('hidden');
+
+    result.value = window.cipher.decode(decodeOffset.value, decodeMessage.value);
+});
 
 
 
