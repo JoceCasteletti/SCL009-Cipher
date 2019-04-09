@@ -1,7 +1,8 @@
+const start = document.getElementById('start');
+
 const encode = document.getElementById('encode');
 const decode = document.getElementById('decode');
-const message_text = document.getElementById('message_text');
-const start = document.getElementById('start');
+
 const container = document.getElementById('container');
 
 
@@ -12,11 +13,28 @@ const result = document.getElementById('result');
 const sendEmail= document.getElementById('send_email');
 const decodeMessage = document.getElementById('decode_message');
 const decodeOffset = document.getElementById('decode_offset');
+const instructions = document.getElementById('instructions');
+const welcomeName = document.getElementById('welcome_name');
+const name = document.getElementById('name');
+
+start.addEventListener('click', () => {
+    // Aquí va lógica de validación de comprobación de nombre ante de continuar
+
+   if (name.value.length == 0) {
+       alert('Ingrese su nombre para poder continuar, porfavor')
+   } else {
+     container.classList.remove('hidden');
+     instructions.classList.remove('hidden');
+     welcomeName.innerText = name.value;
+   }
+})
+
+
 
 // https://developer.mozilla.org/en-US/docs/Web/Events/keypress
 encodeMessage.addEventListener('keypress', (event) => {
     if (!(event.keyCode >= 65 && event.keyCode <=90)) {
-        event.preventDefault();0
+        event.preventDefault();
     }
 })
 
@@ -37,31 +55,6 @@ encode.addEventListener('click', () => {
 });
 
 
-start.addEventListener('click', () => {
-    // Aquí va lógica de validación de comprobación de nombre ante de continuar
-
-   if (document.getElementById('name').value.length == 0) {
-       alert('Ingrese su nombre para poder continuar, porfavor')
-   } else {
-     container.style.display = 'block';
-   }
-
-
-
-
-})
-
-
-sendEmail.addEventListener('click',() => {
-    if(document.getElementById('send_email').value.length == 0) {
-        alert('Ingrese el email al que desea enviar el texto')
-    } else {
-        container.style.display = 'block';
-      }
-   
-
-})
-
 
 decode.addEventListener('click',() => {
     if (decodeMessage.value.length == 0) {
@@ -81,7 +74,16 @@ decode.addEventListener('click',() => {
     result.value = window.cipher.decode(decodeOffset.value, decodeMessage.value);
 });
 
+sendEmail.addEventListener('click',() => {
+    if(document.getElementById('send_email').value.length == 0) {
+        alert('Ingrese el email al que desea enviar el texto')
+    } else {
+        container.style.display = 'block';
+      }
+   
 
+})
 
+//  clear.addEventListener
 
 

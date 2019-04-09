@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -8,22 +7,23 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="shortcut icon" type="image/png" href="img/candado.png" />
-    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" href="index.html"><i class="fas fa-compass"></i> Cifrado</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar" target="_blank">About
+                        <a class="nav-link" href="https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar"
+                            target="_blank">About
                             <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
@@ -31,77 +31,89 @@
         </nav>
     </header>
     <main>
-        <section>
-            <div>
-                <h1>Cifrado Cesar</h1>
-                <div id= "welcome"class="starting"></div>
-                <p>Bienvenido a la pagina de cifrar oaispasjkld</p>
-                <h5>Te damos la bienvenida a nuestra aplicación, con esta aplicación 
-                    podrás codificar mensajes con el objetivo de hacer difícil la lectura del mensaje original 
-                    por terceros. Este mensaje codificado podra ser decodificado por tu destinatario de manera
-                    sencilla si tú y tu destinatario conocen el secreto en común.</h5>
-                <h5>Te damos la bienvenida a nuestra aplicación, con esta aplicación 
-                    podrás codificar mensajes con el objetivo de hacer difícil la lectura del mensaje original 
-                    por terceros. Este mensaje codificado podra ser decodificado por tu destinatario de manera
-                    sencilla si tú y tu destinatario conocen el secreto en común.</h5>
-            </div>
-            <input id="name" type="text" name="name" placeholder="Ingrese su nombre" /><br>
-            <div id="root">
-                    <h3>Cipher</h3>
-                    <button id="start" type="button" class="btn btn-info">Comenzar</button>
-                </div>
+        <section class="jumbotron">
+
+            <h1 class="display-3">Cifrado Cesar</h1>
+            <p class="lead">Bienvenido a la pagina de cifrar oaispasjkld.</p>
+            <hr class="my-4">
+            <p>Te damos la bienvenida a nuestra aplicación, con esta aplicación
+                podrás codificar mensajes con el objetivo de hacer difícil la lectura del mensaje original
+                por terceros. Este mensaje codificado podra ser decodificado por tu destinatario de manera
+                sencilla si tú y tu destinatario conocen el secreto en común.</p>
+            <p class="lead">
+                    <form>
+                            <div class="form-group">
+                                <label for="name">Ingrese su nombre</label>
+                                <input id="name" class="form-control" type="text" name="name" placeholder="Juan Pérez" />
+                            </div>
+                            <a id="start" class="btn btn-primary" href="#instructions" role="button">Comenzar</a>
+                        </form>
+            </p>
         </section>
-        <section id="instructions" class="hidden">
-            
-            <div>
-                <div>
-                    <p><b>Instrucciones:</b></p>
-                    <ul>
-                        <li>Ingrese su nombre y de click en comenzar.</li>
-                        <li>Ingrese el mensaje que desea Codificar o Decodificar.</li>
-                        <li>Indique el número secreto.</li>
-                        <li>Haga click en Codificar o Decodificar según corresponda para ver el
-                            resultado.</li>
-                        <li>Puedes cifrar los siguientes caracteres: Mayúsculas,minúsculas</li>
-                        <li>Presione "Enviar resultado por E-mail" si desea compartir el
-                            mensaje.</li>
-                        <li>Para escribir un nuevo texto a Codificar o Decodificar presione
-                            "Limpiar"</li>
-                    </ul>
-                </div>
-               
-            </div>
+        <section id="instructions" class="hidden container">
+            <h2 class="display-4">Bienvenid@ <span id="welcome_name"></span></h2>
+            <h5>Instrucciones</h5>
+            <ul>
+                <li>Ingrese su nombre y de click en comenzar.</li>
+                <li>Ingrese el mensaje que desea Codificar o Decodificar.</li>
+                <li>Indique el número secreto.</li>
+                <li>Haga click en Codificar o Decodificar según corresponda para ver el
+                    resultado.</li>
+                <li>Puedes cifrar los siguientes caracteres: Mayúsculas,minúsculas</li>
+                <li>Presione "Enviar resultado por E-mail" si desea compartir el
+                    mensaje.</li>
+                <li>Para escribir un nuevo texto a Codificar o Decodificar presione
+                    "Limpiar"</li>
+            </ul>
         </section>
-        <section id="container" class="hidden">
-            <div id="encode_container" class="data-container">
-                <h5>Ingrese el mensaje a codificar</h5>
-                <textarea id="encode_message"></textarea>
-                <!-- <input id="encode_message" type="text" placeholder="Mensaje"> -->
-                <input id="encode_offset" type="number" placeholder="Número secreto">
-                <button id="encode" type="button">Codificar</button>
+        <section id="container" class="hidden container">
+            <div class="row">
+                <div id="encode_container" class="data-container col-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="encode_message">Mensaje a codificar</label>
+                            <textarea class="form-control" id="encode_message" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="encode_offset">Número secreto</label>
+                            <input type="number" class="form-control" id="encode_offset" placeholder="Número secreto">
+                        </div>
+                        <button id="encode" type="submit" class="btn btn-primary mb-2">Codificar</button>
+                    </form>
+                </div>
+
+                <div id="decode_container" class="data-container col-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="decode_message">Mensaje a decodificar</label>
+                            <textarea class="form-control" id="decode_message" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="decode_offset">Número secreto</label>
+                            <input type="number" class="form-control" id="decode_offset" placeholder="Número secreto">
+                        </div>
+                        <button id="decode" type="submit" class="btn btn-primary mb-2">Decodificar</button>
+                    </form>
+                </div>
             </div>
 
-            <div id="decode_container" class="data-container">
-                <h5>Ingrese el mensaje a decodificar</h5>
-                <input id="decode_message" type="text" placeholder="Mensaje">
-                <input id="decode_offset" type="number" placeholder="Número secreto">
-                <button id="decode" type="button">Decodificar</button>
-            </div>
 
-            <div>
-                <div id="result_container" class="hidden">
-                    <h4>Resultado</h4>
-                    <input id="result" type="text">
-                    <button id="send_email">Enviar resultado por E-mail</button>
-                     <!--<a href="https://www.gmail.com/mail/help/intl/es/about.html?iframe" target="_blank"></a>-->
-                    <button id="clean">Limpiar</button>
-                    <button id="btnhome"><a href="index.html">Volver</a></button>
+
+            <div class="row">
+                <div id="result_container" class="hidden col-12">
+
+                    <form>
+                            <div class="form-group">
+                                <label for="result">Resultado</label>
+                                <textarea class="form-control" id="result" rows="3"></textarea>
+                            </div>
+                            <button id="clean" type="submit" class="btn btn-primary mb-2">Limpiar</button>
+                        </form>
                 </div>
             </div>
         </section>
     </main>
-    <!-- <div class="float-sm-left"></div><br>  revisar -->
-    <footer class="navbar navbar-dark bg-primary">
+    <!-- <footer class="navbar navbar-dark bg-primary">
         <div class="row">
             <div class="col col-sm-6 ">
                 <h6>Cipher &copy; 2019-04</h6>
@@ -115,7 +127,12 @@
                 </ul>
             </div>
         </div>
-    </footer>
+    </footer> -->
+
+    <footer class="bg-primary text-white">
+
+            <div class="text-center py-4">© 2019 Copyright: Cifrado Cesar</div>
+          </footer>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

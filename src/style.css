@@ -3,27 +3,11 @@
 }
 
 body {
-    background: url(img/cifrado.jpg) no-repeat center center fixed;
+    /* background: url(img/cifrado.jpg) no-repeat center center fixed; */
     height: 100px;
     background-size: cover;
 }
 
-#encode_message {
-    width: 35em;
-	height: 15em;
-    background-color: rgba(192,192,192,0.3);
-    /* border: 1px solid black;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    */
-}
-    
-#decode_message {
-    width: 35em;
-	height: 15em;
-	background-color: rgba(192,192,192,0.3);
-}
-
-.starting{
-    background-color:white;
+textarea {
+    background-color: rgba(192,192,192,0.3) !important;
 }
