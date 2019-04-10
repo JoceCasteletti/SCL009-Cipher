@@ -1,4 +1,3 @@
-const $ = window.$;
 //se crea variable para pasar test
 const start = document.getElementById('start');
 const encodeMessage = document.getElementById('encode_message');
