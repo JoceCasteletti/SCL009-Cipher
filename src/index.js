@@ -1,21 +1,19 @@
 const start = document.getElementById('start');
-
+const encodeMessage = document.getElementById('encode_message');
 const encode = document.getElementById('encode');
 const decode = document.getElementById('decode');
-
 const container = document.getElementById('container');
-
-
-const encodeMessage = document.getElementById('encode_message');
+const instructions = document.getElementById('instructions');
+const welcomeName = document.getElementById('welcome_name');
 const encodeOffset = document.getElementById('encode_offset');
 const resultContainer = document.getElementById('result_container');
 const result = document.getElementById('result');
-const sendEmail= document.getElementById('send_email');
+const sendEmail = document.getElementById('send_email');
 const decodeMessage = document.getElementById('decode_message');
 const decodeOffset = document.getElementById('decode_offset');
-const instructions = document.getElementById('instructions');
-const welcomeName = document.getElementById('welcome_name');
+const clean = document.getElementById('clean');
 const name = document.getElementById('name');
+const modalText = document.getElementById('modal_text');
 
 start.addEventListener('click', () => {
     // Aquí va lógica de validación de comprobación de nombre ante de continuar
@@ -33,12 +31,19 @@ start.addEventListener('click', () => {
 
 // https://developer.mozilla.org/en-US/docs/Web/Events/keypress
 encodeMessage.addEventListener('keypress', (event) => {
-    if (!(event.keyCode >= 65 && event.keyCode <=90)) {
+    if (
+        !(event.keyCode >= 65 && event.keyCode <=90 ||
+        event.keyCode >= 97 && event.keyCode <=122 ||
+        event.keyCode >= 48 && event.keyCode <=57 ||
+        event.keyCode >= 32 && event.keyCode <=32)
+        ) {
         event.preventDefault();
     }
 })
 
-encode.addEventListener('click', () => {
+encode.addEventListener('click', (event) => {
+    event.preventDefault();
+    
     if (encodeMessage.value.length == 0) {
         alert('Ingrese algun mensaje por favor');
         return;
@@ -56,7 +61,9 @@ encode.addEventListener('click', () => {
 
 
 
-decode.addEventListener('click',() => {
+decode.addEventListener('click',(event) => {
+    event.preventDefault();
+
     if (decodeMessage.value.length == 0) {
         alert('Ingrese algun mensaje por favor');
         return; 
@@ -74,16 +81,25 @@ decode.addEventListener('click',() => {
     result.value = window.cipher.decode(decodeOffset.value, decodeMessage.value);
 });
 
-sendEmail.addEventListener('click',() => {
-    if(document.getElementById('send_email').value.length == 0) {
-        alert('Ingrese el email al que desea enviar el texto')
-    } else {
-        container.style.display = 'block';
-      }
-   
+sendEmail.addEventListener('click', (event) => {
+    event.preventDefault();
 
-})
+    //https://getbootstrap.com/docs/4.0/components/modal/
+    //Muestra el resultado codificado o decodificado en el modal
+    modalText.innerHTML = result.value;
+    $('#modal_email').modal('show');
 
-//  clear.addEventListener
+});
+
+//Limpiar 
+clean.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    encodeMessage.value = '';
+    decodeMessage.value = '';
+    decodeOffset.value = '';
+    encodeOffset.value = '';
+    resultContainer.value='';
+});
 
 

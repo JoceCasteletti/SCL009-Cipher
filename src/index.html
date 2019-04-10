@@ -32,38 +32,33 @@
     </header>
     <main>
         <section class="jumbotron">
-
-            <h1 class="display-3">Cifrado Cesar</h1>
-            <p class="lead">Bienvenido a la pagina de cifrar oaispasjkld.</p>
+            <!-- https://getbootstrap.com/docs/4.0/components/jumbotron/ -->
+            <h1 class="display-3">Secret Keys</h1>
+            <p class="lead">Bienvenido!</p>
             <hr class="my-4">
-            <p>Te damos la bienvenida a nuestra aplicación, con esta aplicación
-                podrás codificar mensajes con el objetivo de hacer difícil la lectura del mensaje original
-                por terceros. Este mensaje codificado podra ser decodificado por tu destinatario de manera
-                sencilla si tú y tu destinatario conocen el secreto en común.</p>
+            <p>Te damos la bienvenida a nuestra aplicación, con Secret Keys podrás crear y codificar todas tus 
+                claves para una mayor seguridad y tranquilidad.</p>
             <p class="lead">
                     <form>
                             <div class="form-group">
-                                <label for="name">Ingrese su nombre</label>
-                                <input id="name" class="form-control" type="text" name="name" placeholder="Juan Pérez" />
+                                <label for="name">Ingrese su nombre:</label>
+                                <input id="name" class="form-control" type="text" name="name" placeholder="Nombre o apodo" />
                             </div>
                             <a id="start" class="btn btn-primary" href="#instructions" role="button">Comenzar</a>
-                        </form>
+                    </form>
             </p>
         </section>
         <section id="instructions" class="hidden container">
-            <h2 class="display-4">Bienvenid@ <span id="welcome_name"></span></h2>
-            <h5>Instrucciones</h5>
+            <h3 class="display-4">Bienvenid@ <span id="welcome_name"></span></h3>
+            <h5>Instrucciones:</h5>
             <ul>
-                <li>Ingrese su nombre y de click en comenzar.</li>
-                <li>Ingrese el mensaje que desea Codificar o Decodificar.</li>
+                <li>Ingrese la clave que desea ocultar.</li>
                 <li>Indique el número secreto.</li>
-                <li>Haga click en Codificar o Decodificar según corresponda para ver el
+                <li>Haga click en Codificar o Decodificar según corresponda para ver el nuevo
                     resultado.</li>
-                <li>Puedes cifrar los siguientes caracteres: Mayúsculas,minúsculas</li>
-                <li>Presione "Enviar resultado por E-mail" si desea compartir el
-                    mensaje.</li>
-                <li>Para escribir un nuevo texto a Codificar o Decodificar presione
-                    "Limpiar"</li>
+                <li>Puedes cifrar los siguientes caracteres: Mayúsculas,minúsculas,números y espacios.</li>
+                <li>Presione "Enviar E-mail" para guardar su nueva clave.</li>
+                <li>Para generar une nueva clave presione el botón "Limpiar"</li>
             </ul>
         </section>
         <section id="container" class="hidden container">
@@ -108,6 +103,7 @@
                                 <textarea class="form-control" id="result" rows="3"></textarea>
                             </div>
                             <button id="clean" type="submit" class="btn btn-primary mb-2">Limpiar</button>
+                            <button id="send_email" type="submit" class="btn btn-success mb-2">Enviar E-mail</button>
                         </form>
                 </div>
             </div>
@@ -130,9 +126,31 @@
     </footer> -->
 
     <footer class="bg-primary text-white">
+        <div class="text-center py-4">© 2019 Copyright: Secret Keys</div>
+    </footer>
 
-            <div class="text-center py-4">© 2019 Copyright: Cifrado Cesar</div>
-          </footer>
+    <!-- Modale va aparte porque no es del html solo al presionar enviar email -->
+    <div id="modal_email" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Previo E-mail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="modal_text">Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <input type="email" class="form-control"  placeholder="Ingrese E-mail">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Enviar</button>
+                    <!-- data dismiss hace que se cierre el modale al apretar el botón en este caso close -->
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
