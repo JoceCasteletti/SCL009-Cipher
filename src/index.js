@@ -1,3 +1,5 @@
+const $ = window.$;
+//se crea variable para pasar test
 const start = document.getElementById('start');
 const encodeMessage = document.getElementById('encode_message');
 const encode = document.getElementById('encode');
@@ -21,6 +23,7 @@ start.addEventListener('click', () => {
    if (name.value.length == 0) {
        alert('Ingrese su nombre para poder continuar, porfavor')
    } else {
+    // no se muestra hasta ingresar el nombre y presionar el botón comenzar
      container.classList.remove('hidden');
      instructions.classList.remove('hidden');
      welcomeName.innerText = name.value;
@@ -40,7 +43,8 @@ encodeMessage.addEventListener('keypress', (event) => {
         event.preventDefault();
     }
 })
-
+//preventDefault es para determinar el comportamiento predeterminado
+//en este caso que al hacer click no se vaya hacia arriba en encode
 encode.addEventListener('click', (event) => {
     event.preventDefault();
     

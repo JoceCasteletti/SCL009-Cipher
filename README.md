@@ -11,8 +11,8 @@ El presente readme tiene como finalidad documentar el proceso de creación de un
 * [Proceso del diseño](#proceso-del-diseño)
 * [Planificación del Proyecto](#planificacion-del-proyecto)
 * [Historias de usuario](#historias-de-usuario)
-
-
+* [Diagrama de flujo](#diagrama-de-flujo)
+* [Cheklist](#Checklist)
 
 ## Definición del producto
 En esta aplicación el usuario podrá ingresar sus claves y poder obtener una clave secreta que solo el podrá conocer.
@@ -38,6 +38,11 @@ Secret Keys, ideal para usar desde el dispositivo móvil.
 
 ¿Cuándo utilizan o utilizarían el producto?
 Al momento de crear una clave o recordarlas.
+
+
+![Proyecto](src/img/pantalla1.jpg)
+
+![Proyecto](src/img/pantalla2.jpg)
 
 ## Planificación del proyecto 📑
 Con trello se llevo de manera más detallada la planifición del desarrrollo de la app el cual se pueden encontrar [aquí](https://trello.com/b/SNLUaYVB/cipher-20)
@@ -79,18 +84,18 @@ CRITERIOS DE ACEPTACIÓN
 Inicialmente se elabora prototipado de baja fidelidad para su uso en test y sesiones de diseño participativo, con la idea es conseguir una gran cantidad de información de la interacción entre la interfaz y el usuario mediante la evaluación de este prototipo. Dado que los prototipos de baja fidelidad son baratos, tanto en términos de dinero como de tiempo, es posible obtener una serie de información de manera rápida y fácil.
 
 ## Diagrama de flujo
-![Prototipo de Baja Fidelidad](./src/img/Sketch_1.jpg "Boceto 1")
-![Prototipo de Baja Fidelidad](./src/img/Sketch_2.jpg "Boceto 2")
-![Prototipo de Baja Fidelidad](./src/img/Sketch_3.jpg "Boceto 3")
-![Prototipo de Baja Fidelidad](./src/img/Sketch_4.jpg "Boceto 4")
-![Prototipo de Baja Fidelidad](./src/img/Sketch_5.jpg "Boceto 5")
+![Prototipo primera pantalla](src/img/prototipo1.jpg "Boceto 1")
+![Prototipo segunda pantalla](/src/img/prototipo2.jpg "Boceto 2")
+![Prototipo tercera pantalla](/src/img/prototipo3.jpg "Boceto 3")
+![Prototipo cuarta pantalla](/src/img/prototipo4.jpg "Boceto 4")
 
-## Testing ⚙️
-Con los sketch propuestos se realizó el proceso de testing; obteniendo el siguiente feedback:
+## Consideraciones técnicas 🛠️
+Para el desarrollo de Secret Key, se utilizó bootstrap para el sistema de grilla.
 
-Dejar las indicaciones de uso en una ventana diferente.
-No todas las personas saben lo que significa cifrar y descifrar, generando confusión; por lo tanto, se decide cambiar el nombre de estos botones por palabras adecuadas al contexto.
-En general, usar un lenguaje más entendible por el usuario.
+Secret Key está implementado para cifrar o descifrar textos que incluya letras (mayúsculas, minúsculas), dígitos y espacio.
+
+Es una página responsiva(Tamaño celular y página web)
+
 ## Checklist 🚀
 
 * [X] Usa VanillaJS.
@@ -109,3 +114,8 @@ En general, usar un lenguaje más entendible por el usuario.
 * [X] Cifra/descifra minúsculas
 * [ ] Cifra/descifra _otros_ caracteres (espacios, puntuación, `ñ`, `á`, ...)
 * [ ] Permite usar un `offset` negativo.
+
+
+
+#### Autor 📌
+Jocelyn Casteletti, estudiante de Laboratoria (9° Generación).
