@@ -89,9 +89,9 @@ Inicialmente se elabora prototipado de baja fidelidad para su uso en test y sesi
 
 ## Diagrama de flujo 🔐
 ![Prototipo primera pantalla](src/img/prototipo1.jpg "Boceto 1")
-![Prototipo segunda pantalla](/src/img/prototipo2.jpg "Boceto 2")
-![Prototipo tercera pantalla](/src/img/prototipo3.jpg "Boceto 3")
-![Prototipo cuarta pantalla](/src/img/prototipo4.jpg "Boceto 4")
+![Prototipo segunda pantalla](src/img/prototipo2.jpg "Boceto 2")
+![Prototipo tercera pantalla](src/img/prototipo3.jpg "Boceto 3")
+![Prototipo cuarta pantalla](src/img/prototipo4.jpg "Boceto 4")
 
 ## Consideraciones técnicas 🛠️
 Para el desarrollo de Secret Key, se utilizó bootstrap para el sistema de grilla.
