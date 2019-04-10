@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header> 
+    <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
             <a class="navbar-brand" href="index.html"><i class="fas fa-unlock-alt"></i> Secret Keys</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -36,17 +36,15 @@
             <h1 class="display-3">Secret Keys <i class="fas fa-key"></i></h1>
             <p class="lead">Bienvenido!</p>
             <hr class="my-4">
-            <p>Te damos la bienvenida a nuestra aplicación, con Secret Keys podrás crear y codificar todas tus 
+            <p>Te damos la bienvenida a nuestra aplicación, con Secret Keys podrás crear y codificar todas tus
                 claves para una mayor seguridad y tranquilidad.</p>
-            <p class="lead">
-                    <form>
-                            <div class="form-group">
-                                <label for="name">Ingrese su nombre:</label>
-                                <input id="name" class="form-control" type="text" name="name" placeholder="Nombre o apodo" />
-                            </div>
-                            <a id="start" class="btn btn-primary" href="#instructions" role="button">Comenzar</a>
-                    </form>
-            </p>
+            <form>
+                <div class="form-group">
+                    <label for="name">Ingrese su nombre:</label>
+                    <input id="name" class="form-control" type="text" name="name" placeholder="Nombre o apodo" />
+                </div>
+                <a id="start" class="btn btn-primary" href="#instructions" role="button">Comenzar</a>
+            </form>
         </section>
         <section id="instructions" class="hidden container">
             <h3 class="display-4">Bienvenid@ <span id="welcome_name"></span></h3>
@@ -62,6 +60,7 @@
             </ul>
         </section>
         <section id="container" class="hidden container">
+            <h5>Cifrado</h5>
             <div class="row">
                 <div id="encode_container" class="data-container col-12 col-sm-6">
                     <form>
@@ -98,32 +97,17 @@
                 <div id="result_container" class="hidden col-12">
 
                     <form>
-                            <div class="form-group">
-                                <label for="result">Resultado</label>
-                                <textarea class="form-control" id="result" rows="3"></textarea>
-                            </div>
-                            <button id="clean" type="submit" class="btn btn-primary mb-2">Limpiar</button>
-                            <button id="send_email" type="submit" class="btn btn-success mb-2">Enviar E-mail</button>
-                        </form>
+                        <div class="form-group">
+                            <label for="result">Resultado</label>
+                            <textarea class="form-control" id="result" rows="3"></textarea>
+                        </div>
+                        <button id="clean" type="submit" class="btn btn-primary mb-2">Limpiar</button>
+                        <button id="send_email" type="submit" class="btn btn-success mb-2">Enviar E-mail</button>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
-    <!-- <footer class="navbar navbar-dark bg-primary">
-        <div class="row">
-            <div class="col col-sm-6 ">
-                <h6>Cipher &copy; 2019-04</h6>
-            </div>
-            <div class="col col-sm-6 ">
-                <ul>
-                    <li>Aviso legal</li>
-                    <li>Condiciones Genereales de Uso</li>
-                    <li>Política de Privacidad</li>
-                    <li>Denunciar un contenido ilegal</li>
-                </ul>
-            </div>
-        </div>
-    </footer> -->
 
     <footer class="bg-primary text-white">
         <div class="text-center py-4">© 2019 Copyright: Secret Keys</div>
@@ -143,7 +127,7 @@
                     <p id="modal_text">Modal body text goes here.</p>
                 </div>
                 <div class="modal-footer">
-                    <input type="email" class="form-control"  placeholder="Ingrese E-mail">
+                    <input type="email" class="form-control" placeholder="Ingrese E-mail">
                     <button type="button" class="btn btn-primary" data-dismiss="modal">Enviar</button>
                     <!-- data dismiss hace que se cierre el modale al apretar el botón en este caso close -->
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
