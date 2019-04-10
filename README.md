@@ -1,6 +1,6 @@
 # Secret Keys 🔐
 
-Puedes ver el proyecto [aquí](https://jocecasteletti.github.io/SCL009-Cipher/)
+Puedes ver el proyecto [aquí](https://jocecasteletti.github.io/SCL009-Cipher/src/index.html)
 
 El presente readme tiene como finalidad documentar el proceso de creación de una aplicación web y uso del [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher).
 
