@@ -1,11 +1,13 @@
-# Secret Keys
+# Secret Keys 🔐
+
+Puedes ver el proyecto [aquí](https://jocecasteletti.github.io/SCL009-Cipher/)
 
 El presente readme tiene como finalidad documentar el proceso de creación de una aplicación web y uso del [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher).
 
 ![caeser-cipher](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/2000px-Caesar3.svg.png)
 
 
-## Indice
+## Indice 📖
 
 * [Definición del Producto](#deficion-del-producto)
 * [Proceso del diseño](#proceso-del-diseño)
@@ -14,10 +16,12 @@ El presente readme tiene como finalidad documentar el proceso de creación de un
 * [Diagrama de flujo](#diagrama-de-flujo)
 * [Cheklist](#Checklist)
 
-## Definición del producto
+![claves](/src/img/clave.jpg)
+
+## Definición del producto 📝
 En esta aplicación el usuario podrá ingresar sus claves y poder obtener una clave secreta que solo el podrá conocer.
 
-## Definición del usuario e ideación
+### Definición del usuario e ideación 💡
 
 ![Lluvia de ideas](./src/img/lluviadeideas.png "Lluvia de ideas")
 
@@ -79,11 +83,11 @@ CRITERIOS DE ACEPTACIÓN
 
 *  La app debe tener un botón que le permita al usuario enviar al correo la nueva clave.
 
-#### Prototipo de baja fidelidad 
+#### Prototipo de baja fidelidad 📋
 
-Inicialmente se elabora prototipado de baja fidelidad para su uso en test y sesiones de diseño participativo, con la idea es conseguir una gran cantidad de información de la interacción entre la interfaz y el usuario mediante la evaluación de este prototipo. Dado que los prototipos de baja fidelidad son baratos, tanto en términos de dinero como de tiempo, es posible obtener una serie de información de manera rápida y fácil.
+Inicialmente se elabora prototipado de baja fidelidad para su uso en test y sesiones de diseño participativo, con la idea es conseguir una gran cantidad de información de la interacción entre la interfaz y el usuario mediante la evaluación de este prototipo.
 
-## Diagrama de flujo
+## Diagrama de flujo 🔐
 ![Prototipo primera pantalla](src/img/prototipo1.jpg "Boceto 1")
 ![Prototipo segunda pantalla](/src/img/prototipo2.jpg "Boceto 2")
 ![Prototipo tercera pantalla](/src/img/prototipo3.jpg "Boceto 3")
@@ -117,5 +121,5 @@ Es una página responsiva(Tamaño celular y página web)
 
 
 
-#### Autor 📌
+#### Autor 👩🏻📌
 Jocelyn Casteletti, estudiante de Laboratoria (9° Generación).
