@@ -22,6 +22,10 @@ window.cipher = {
       else if (asciiNumber == 32) {
         asciiNumber = ((asciiNumber - 32 + parseInt(offset)) % 1) + 32;
       }
+      //Ñ o ñ
+      else if (asciiNumber >= 164 && asciiNumber <= 165) {
+        asciiNumber = ((asciiNumber - 164 + parseInt(offset)) % 2) + 164;
+      }
 
       resultEncode += String.fromCharCode(asciiNumber);
     }
@@ -54,6 +58,10 @@ window.cipher = {
       //Espacio
       else if (asciiNumber == 32) {
         asciiNumber = ((asciiNumber - 32 + parseInt(newOffset)) % 1) + 32;
+      }
+      else if (asciiNumber >= 164 && asciiNumber <= 165) {
+        newOffset = 2 - offset % 26;
+        asciiNumber = ((asciiNumber - 164 + parseInt(newOffset)) % 2) + 164;
       }
 
       resultDecode = resultDecode + String.fromCharCode(asciiNumber);

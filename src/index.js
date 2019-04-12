@@ -33,12 +33,14 @@ start.addEventListener('click', () => {
 
 
 // https://developer.mozilla.org/en-US/docs/Web/Events/keypress
-encodeMessage.addEventListener('keypress', (event) => {
+encodeMessage.addEventListener('keydown', (event) => {
+    console.log(event.keyCode);
     if (
         !(event.keyCode >= 65 && event.keyCode <=90 ||
         event.keyCode >= 97 && event.keyCode <=122 ||
         event.keyCode >= 48 && event.keyCode <=57 ||
-        event.keyCode >= 32 && event.keyCode <=32)
+        event.keyCode >= 32 && event.keyCode <=32 ||
+        event.keyCode >= 192 && event.keyCode <=192 ) 
         ) {
         event.preventDefault();
     }
@@ -106,4 +108,12 @@ clean.addEventListener('click', (event) => {
     resultContainer.value='';
 });
 
+
+// document.getElementById('copytext').addEventListener('click', ()=>{
+
+//     document.getElementById('result').select();
+//     document.execCommand('copy');
+
+
+// });
 
